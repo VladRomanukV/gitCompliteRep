@@ -1,0 +1,23 @@
+mixin mane(data)
+	.block-main
+		.block-main__img!=data.img
+		.block-main__controls_top
+			.blok-main__text!=data.title
+			.block-main__icons!=data.icons
+		.block-main__controls
+			.block-main__button!=data.buttonText
+			.block-main__date!=data.mainDate
+		
+block main
+	main.main
+		.main-headline
+			h2 DRIBBBLE PORTFOLIO
+			span VIEW ON WEB
+		// попробовать реализовать миксин
+		// который будет вызываться 1 раз
+		// но выводить все карточки (см. iterrations)
+		.wrapper-block
+			+mane({title:'Vlad Typography Experiment', buttonText:'Type', mainDate:'Jul 14, 2014 '})
+			+mane({title:'LaMusique History List', buttonText:'Mobile', mainDate:'Jul 16, 2014 '})
+			+mane({title:'Blood Pressure Tracker', buttonText:'Mobile', mainDate:'Jul 14, 2014 '})
+			+mane({title:'Feed 2Pieces Project', buttonText:'Mobile', mainDate:'Jul 24, 2014 '})
